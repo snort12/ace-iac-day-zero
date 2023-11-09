@@ -36,7 +36,7 @@ module "security_group_1" {
   name                = "security_group_spoke1"
   description         = "Security group for example usage with EC2 instance"
   vpc_id              = module.aws_spoke_1.vpc.vpc_id
-  ingress_cidr_blocks = ["0.0.0.0/0"]
+  ingress_cidr_blocks = ["31.179.161.226/32"]
   ingress_rules       = ["http-80-tcp", "ssh-tcp", "all-icmp"]
   egress_rules        = ["all-all"]
   providers = {
