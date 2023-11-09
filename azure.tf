@@ -38,7 +38,7 @@ resource "azurerm_network_security_rule" "http" {
   priority                    = 100
   protocol                    = "Tcp"
   source_port_range           = "*"
-  source_address_prefix       = "*"
+  source_address_prefix       = "31.179.161.226/32"
   destination_port_range      = "80"
   destination_address_prefix  = "*"
   resource_group_name         = module.azure_spoke_2.vpc.resource_group
@@ -52,7 +52,7 @@ resource "azurerm_network_security_rule" "ssh" {
   priority                    = 110
   protocol                    = "Tcp"
   source_port_range           = "*"
-  source_address_prefix       = "*"
+  source_address_prefix       = "31.179.161.226/32"
   destination_port_range      = "22"
   destination_address_prefix  = "*"
   resource_group_name         = module.azure_spoke_2.vpc.resource_group
